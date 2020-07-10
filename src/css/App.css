@@ -1,9 +1,89 @@
+/* Type font */
+
+
+
+/*------------------ Types colors ------------------*/
+
+.badge {
+ /* width and color */
+  display: inline-block;
+  width: 4em;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid white;
+  margin: 0 5px;
+  font-weight: 500;
+  color: white;
+  
+}
+
+.normal {
+  background-color: #A8A878;
+}
+.fighting {
+  background-color: #C03028;
+}
+.flying {
+  background-color: #A890F0;
+}
+.poison {
+  background-color: #A040A0;
+}
+.ground {
+  background-color: #E0C068;
+}
+.bug {
+  background-color: #A8B820;
+}
+.ghost {
+  background-color: #705898;
+}
+.steel {
+  background-color: #B8B8D0;
+}
+.fire {
+  background-color: #F08030;
+}
+.water {
+  background-color: #6890F0;
+}
+.grass {
+  background-color: #78C850;
+}
+.electric {
+  background-color: #F8D030;
+}
+.psychic {
+  background-color: #F85888;
+}
+.ice {
+  background-color: #98D8D8;
+}
+.dragon {
+  background-color: #7038F8;
+}
+.dark {
+  background-color: #705848;
+}
+.fairy {
+  background-color: #EE99AC;
+}
+.unknown {
+  background-color: #68A090;
+}
+
+.rock {
+  background-color: #B8A038;
+}
+
+/* ---------------------------------------- */
+
 .App {
   text-align: center;
 }
 
 .header {
-  background-color: #EF5350 ;
+  background-color: #ef5350;
   padding: 20px 0;
 }
 
@@ -19,10 +99,10 @@ main {
 }
 
 .form-container .form {
-  width: 600px;
+  width: 800px;
   display: flex;
   padding: 10px;
-  justify-content: space-around; 
+  justify-content: space-around;
   font-size: 18px;
 }
 
@@ -38,30 +118,29 @@ main {
 }
 
 .form input {
-    width: 400px;
-    border-radius: 5px;
-    padding: 10px;
-    outline: none;
-    border: 1px solid #e0e0e0;
-    font-size: 1em;
+  width: 400px;
+  border-radius: 5px;
+  padding: 10px;
+  outline: none;
+  border: 1px solid #e0e0e0;
+  font-size: 1em;
 }
 
-.form button {
+.form .button {
   width: 150px;
-  background-color: #EF5350;
+  background-color: #ef5350;
   border: none;
   border-radius: 5px;
   color: white;
   font-size: 1em;
-  padding: 15px;
+  padding: 12px;
+  margin-left: 25px;
 }
-
-
 
 .pokemon-list {
   display: grid;
-  grid-template-columns: repeat(4,1fr);
-  gap: 20px ;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
   margin: 0 auto;
   margin-top: 50px;
   max-width: 1000px;
@@ -72,7 +151,7 @@ main {
   border: 1px solid #e0e0e0;
   border-radius: 5px;
   background-color: white;
-  padding: 15px 10px ;
+  padding: 15px 10px;
   position: relative;
 }
 
@@ -80,10 +159,10 @@ main {
   position: absolute;
   top: 0;
   left: 0;
-  font-size: 14px; 
+  font-size: 14px;
   font-weight: bold;
   color: white;
-  background-color: #EF5350;
+  background-color: #ef5350;
   border-bottom-right-radius: 5px;
   width: 3em;
   height: 1.6em;
@@ -96,30 +175,27 @@ main {
 
 .pokemon-item h4 {
   font-size: 20px;
+  text-transform: capitalize;
 }
 
-
 footer {
-  background-color: #EF5350;
+  background-color: #ef5350;
   color: white;
   display: flex;
   justify-content: center;
 }
 
-
-
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1024px) {
   .pokemon-list {
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     width: 80%;
   }
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
   .pokemon-list {
-    grid-template-columns: repeat(2,1fr);
-   
+    grid-template-columns: repeat(2, 1fr);
   }
   .form-container .form {
     flex-wrap: wrap;
@@ -128,29 +204,26 @@ footer {
     width: initial;
   }
 
-  .form button {
+  .form .button {
     margin-top: 20px;
   }
 }
 
-@media screen and (max-width: 480px){
+@media screen and (max-width: 480px) {
   .form input {
-    width: 350px;
+    width: 300px;
   }
 }
 
-@media screen and (max-width: 320px){
-
+@media screen and (max-width: 320px) {
   .form input {
     width: 250px;
   }
   .form button {
-    padding: 10px ;
+    padding: 10px;
   }
 
   .pokemon-list {
     grid-template-columns: 1fr;
   }
 }
-
-

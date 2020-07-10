@@ -3,16 +3,12 @@ import React from "react";
 /* Components */
 import PokemonCard from "./PokemonCard";
 
-const PokemonList = () => {
+const PokemonList = ({ list }) => {
   return (
     <section className="pokemon-list">
-      <PokemonCard />
-      <PokemonCard />
-      <PokemonCard />
-      <PokemonCard />
-      <PokemonCard />
-      <PokemonCard />
-      <PokemonCard />
+      {list.map((pokemon) => (
+        <PokemonCard key={pokemon.name} pokemon={pokemon} />
+      ))}
     </section>
   );
 };

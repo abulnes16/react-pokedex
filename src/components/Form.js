@@ -1,11 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 
-const Form = () => {
+const Form = ({ filter }) => {
+
+  const [name, setName] = useState("");
+
+  const onSubmit = (e) => {
+    e.preventDefault()
+    /* Levantamos el estado llamando a la función padre */
+    filter(name);
+  }
+
   return (
     <section className="form-container">
       <div className="form">
-        <input type="text" placeholder="Nombre del pokemon" />
-        <button>Buscar</button>
+        <form onSubmit={onSubmit}>
+          <input
+            type="text"
+            placeholder="Nombre del pokemon"
+            onChange={(value) => setName(value.target.value)}
+          />
+          <input className="button" type="submit" value="Buscar" />
+        </form>
       </div>
     </section>
   );

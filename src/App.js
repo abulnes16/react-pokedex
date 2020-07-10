@@ -1,131 +1,21 @@
 import React from "react";
 import "./css/App.css";
 
+/* Components */
+import Header from "./components/Header";
+import Form from "./components/Form";
+import PokemonList from "./components/PokemonList";
+import Footer from "./components/Footer";
+
 function App() {
   return (
     <div className="App">
-      <header className="header">
-        <img src={require("./assets/img/logo.png")} alt="logo" width="200" />
-      </header>
+      <Header logoPath="./assets/img/logo.png" />
       <main className="main">
-        <section className="form-container">
-          <div className="form">
-            <input type="text" placeholder="Nombre del pokemon" />
-            <button>Buscar</button>
-          </div>
-        </section>
-        <section className="pokemon-list">
-         
-            <article className="pokemon-item">
-              <span className="pokemon-number"># 25</span>
-              <img
-                src={require("./assets/img/pikachu.png")}
-                alt="pokemon-img"
-              />
-              <div className="pokemon-detail">
-                <h4>Pikachu</h4>
-                <div className="type-list">
-                  <span>Eléctrico</span>
-                </div>
-              </div>
-            </article>
-            <article className="pokemon-item">
-              <span className="pokemon-number"># 25</span>
-              <img
-                src={require("./assets/img/pikachu.png")}
-                alt="pokemon-img"
-              />
-              <div className="pokemon-detail">
-                <h4>Pikachu</h4>
-                <div className="type-list">
-                  <span>Eléctrico</span>
-                </div>
-              </div>
-            </article>
-            <article className="pokemon-item">
-              <span className="pokemon-number"># 25</span>
-              <img
-                src={require("./assets/img/pikachu.png")}
-                alt="pokemon-img"
-              />
-              <div className="pokemon-detail">
-                <h4>Pikachu</h4>
-                <div className="type-list">
-                  <span>Eléctrico</span>
-                </div>
-              </div>
-            </article>
-            <article className="pokemon-item">
-              <span className="pokemon-number"># 25</span>
-              <img
-                src={require("./assets/img/pikachu.png")}
-                alt="pokemon-img"
-              />
-              <div className="pokemon-detail">
-                <h4>Pikachu</h4>
-                <div className="type-list">
-                  <span>Eléctrico</span>
-                </div>
-              </div>
-            </article>
-            <article className="pokemon-item">
-              <span className="pokemon-number"># 25</span>
-              <img
-                src={require("./assets/img/pikachu.png")}
-                alt="pokemon-img"
-              />
-              <div className="pokemon-detail">
-                <h4>Pikachu</h4>
-                <div className="type-list">
-                  <span>Eléctrico</span>
-                </div>
-              </div>
-            </article>
-            <article className="pokemon-item">
-              <span className="pokemon-number"># 25</span>
-              <img
-                src={require("./assets/img/pikachu.png")}
-                alt="pokemon-img"
-              />
-              <div className="pokemon-detail">
-                <h4>Pikachu</h4>
-                <div className="type-list">
-                  <span>Eléctrico</span>
-                </div>
-              </div>
-            </article>
-            <article className="pokemon-item">
-              <span className="pokemon-number"># 25</span>
-              <img
-                src={require("./assets/img/pikachu.png")}
-                alt="pokemon-img"
-              />
-              <div className="pokemon-detail">
-                <h4>Pikachu</h4>
-                <div className="type-list">
-                  <span>Eléctrico</span>
-                </div>
-              </div>
-            </article>
-            <article className="pokemon-item">
-              <span className="pokemon-number"># 25</span>
-              <img
-                src={require("./assets/img/pikachu.png")}
-                alt="pokemon-img"
-              />
-              <div className="pokemon-detail">
-                <h4>Pikachu</h4>
-                <div className="type-list">
-                  <span>Eléctrico</span>
-                </div>
-              </div>
-            </article>
-        
-        </section>
+        <Form />
+        <PokemonList />
       </main>
-      <footer>
-        <h3>Creado con amor por @abulnes16</h3>
-      </footer>
+      <Footer author='@abulnes16' />
     </div>
   );
 }

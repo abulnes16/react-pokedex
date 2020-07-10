@@ -18,7 +18,7 @@ function App() {
   const [error, setError] = useState(false);
 
   useEffect(() => {
-    getPokemons()
+    getPokemons(20)
       .then((res) => {
         setPokemonList(res);
         setFilterPokemons(res);

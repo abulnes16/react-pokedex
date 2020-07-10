@@ -1,9 +1,9 @@
 /* Modules */
 import axios from "../modules/axios";
 
-export const getPokemons = async () => {
+export const getPokemons = async (limit) => {
     try {
-        const response = await axios.get('pokemon?limit=150');
+        const response = await axios.get(`pokemon?limit=${limit}`);
         if (response.status === 200){
             return response.data.results;
         } else {

@@ -108,6 +108,84 @@ footer {
 
 
 
+/*------------------ Types colors ------------------*/
+
+.badge {
+  /* width and color */
+   display: inline-block;
+   width: 5em;
+   padding: 5px;
+   border-radius: 5px;
+   border: 1px solid white;
+   margin: 0 5px;
+   font-weight: 500;
+   color: white;
+   text-transform: uppercase;
+   
+ }
+ 
+ .normal {
+   background-color: #A8A878;
+ }
+ .fighting {
+   background-color: #C03028;
+ }
+ .flying {
+   background-color: #A890F0;
+ }
+ .poison {
+   background-color: #A040A0;
+ }
+ .ground {
+   background-color: #E0C068;
+ }
+ .bug {
+   background-color: #A8B820;
+ }
+ .ghost {
+   background-color: #705898;
+ }
+ .steel {
+   background-color: #B8B8D0;
+ }
+ .fire {
+   background-color: #F08030;
+ }
+ .water {
+   background-color: #6890F0;
+ }
+ .grass {
+   background-color: #78C850;
+ }
+ .electric {
+   background-color: #F8D030;
+ }
+ .psychic {
+   background-color: #F85888;
+ }
+ .ice {
+   background-color: #98D8D8;
+ }
+ .dragon {
+   background-color: #7038F8;
+ }
+ .dark {
+   background-color: #705848;
+ }
+ .fairy {
+   background-color: #EE99AC;
+ }
+ .unknown {
+   background-color: #68A090;
+ }
+ 
+ .rock {
+   background-color: #B8A038;
+ }
+ 
+ /* ---------------------------------------- */
+ 
+
 @media screen and (max-width: 1024px){
   .pokemon-list {
     grid-template-columns: repeat(3,1fr);

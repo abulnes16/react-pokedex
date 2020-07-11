@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <header className="header">
-        <img src={require("./assets/img/logo.png")} alt="logo" width="200" />
+        <img src={"assets/img/logo.png"} alt="logo" width="200" />
       </header>
       <main className="main">
         <section className="form-container">
@@ -19,104 +19,104 @@ function App() {
             <article className="pokemon-item">
               <span className="pokemon-number"># 25</span>
               <img
-                src={require("./assets/img/pikachu.png")}
+                src={"./assets/img/pikachu.png"}
                 alt="pokemon-img"
               />
               <div className="pokemon-detail">
                 <h4>Pikachu</h4>
                 <div className="type-list">
-                  <span>Eléctrico</span>
+                  <span className="badge electric">Eléctrico</span>
                 </div>
               </div>
             </article>
             <article className="pokemon-item">
               <span className="pokemon-number"># 25</span>
               <img
-                src={require("./assets/img/pikachu.png")}
+                src={"./assets/img/pikachu.png"}
                 alt="pokemon-img"
               />
               <div className="pokemon-detail">
                 <h4>Pikachu</h4>
                 <div className="type-list">
-                  <span>Eléctrico</span>
+                  <span className="badge electric">Eléctrico</span>
                 </div>
               </div>
             </article>
             <article className="pokemon-item">
               <span className="pokemon-number"># 25</span>
               <img
-                src={require("./assets/img/pikachu.png")}
+                src={"./assets/img/pikachu.png"}
                 alt="pokemon-img"
               />
               <div className="pokemon-detail">
                 <h4>Pikachu</h4>
                 <div className="type-list">
-                  <span>Eléctrico</span>
+                  <span className="badge electric">Eléctrico</span>
                 </div>
               </div>
             </article>
             <article className="pokemon-item">
               <span className="pokemon-number"># 25</span>
               <img
-                src={require("./assets/img/pikachu.png")}
+                src={"./assets/img/pikachu.png"}
                 alt="pokemon-img"
               />
               <div className="pokemon-detail">
                 <h4>Pikachu</h4>
                 <div className="type-list">
-                  <span>Eléctrico</span>
+                  <span className="badge electric">Eléctrico</span>
                 </div>
               </div>
             </article>
             <article className="pokemon-item">
               <span className="pokemon-number"># 25</span>
               <img
-                src={require("./assets/img/pikachu.png")}
+                src={"./assets/img/pikachu.png"}
                 alt="pokemon-img"
               />
               <div className="pokemon-detail">
                 <h4>Pikachu</h4>
                 <div className="type-list">
-                  <span>Eléctrico</span>
+                  <span className="badge electric">Eléctrico</span>
                 </div>
               </div>
             </article>
             <article className="pokemon-item">
               <span className="pokemon-number"># 25</span>
               <img
-                src={require("./assets/img/pikachu.png")}
+                src={"./assets/img/pikachu.png"}
                 alt="pokemon-img"
               />
               <div className="pokemon-detail">
                 <h4>Pikachu</h4>
                 <div className="type-list">
-                  <span>Eléctrico</span>
+                  <span className="badge electric">Eléctrico</span>
                 </div>
               </div>
             </article>
             <article className="pokemon-item">
               <span className="pokemon-number"># 25</span>
               <img
-                src={require("./assets/img/pikachu.png")}
+                src={"./assets/img/pikachu.png"}
                 alt="pokemon-img"
               />
               <div className="pokemon-detail">
                 <h4>Pikachu</h4>
                 <div className="type-list">
-                  <span>Eléctrico</span>
+                  <span className="badge electric">Eléctrico</span>
                 </div>
               </div>
             </article>
             <article className="pokemon-item">
               <span className="pokemon-number"># 25</span>
               <img
-                src={require("./assets/img/pikachu.png")}
+                src={"./assets/img/pikachu.png"}
                 alt="pokemon-img"
               />
               <div className="pokemon-detail">
                 <h4>Pikachu</h4>
                 <div className="type-list">
-                  <span>Eléctrico</span>
+                  <span className="badge electric">Eléctrico</span>
                 </div>
               </div>
             </article>

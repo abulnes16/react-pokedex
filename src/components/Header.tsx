@@ -1,6 +1,10 @@
 import React from "react";
 
-const Header = (props) => {
+interface HeaderProps {
+  logo?: string;
+}
+
+const Header: React.FC<HeaderProps> = (props) => {
   return (
     <header className="header">
       <img src={props.logo} alt="logo" width="200" />

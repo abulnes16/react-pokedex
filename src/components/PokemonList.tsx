@@ -1,9 +1,14 @@
 import React from "react";
+import { PokemonShortInfo } from "../models";
 
 /* Components */
 import PokemonItem from "./PokemonItem";
 
-const PokemonList = (props) => {
+interface PokemonListProps {
+  list: PokemonShortInfo[];
+}
+
+const PokemonList: React.FC<PokemonListProps> = (props) => {
   return (
     <section className="pokemon-list">
       {props.list.map((pokemon) => (

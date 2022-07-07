@@ -1,6 +1,10 @@
 import React from "react";
 
-const Footer = (props) => {
+interface FooterProps {
+  author: string;
+}
+
+const Footer: React.FC<FooterProps> = (props) => {
   return (
     <footer>
       <h3>Creado con amor por {props.author}</h3>

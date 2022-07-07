@@ -1,12 +1,16 @@
 import React, { useState } from "react";
 
-const Form = (props) => {
+interface FormProps {
+  filterList: (name: string) => void;
+}
+
+const Form: React.FC<FormProps> = (props) => {
   const [pokemonName, setPokemonName] = useState("");
 
-  const searchPokemon = (event) => {
+  const searchPokemon = (event: React.FormEvent) => {
     event.preventDefault();
-    props.filterList(pokemonName)
-  }
+    props.filterList(pokemonName);
+  };
 
   return (
     <section className="form-container">
@@ -16,7 +20,7 @@ const Form = (props) => {
           placeholder="Nombre del pokemon"
           onChange={(event) => setPokemonName(event.target.value)}
         />
-        <input className="button" type="submit" value="Buscar"/>
+        <input className="button" type="submit" value="Buscar" />
       </form>
     </section>
   );

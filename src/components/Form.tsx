@@ -1,12 +1,12 @@
 import React from "react";
 import { useAppDispatch } from "../store";
-import { savePokemonName } from "../store/slices/pokemon/pokemon.actions";
+import { Actions } from "../store/slices";
 
 const Form: React.FC<any> = () => {
   const dispatch = useAppDispatch();
 
   const setPokemonName = (name: string) => {
-    dispatch(savePokemonName(name));
+    dispatch(Actions.savePokemonName(name));
   };
 
   return (

@@ -1,52 +1,49 @@
-import { PokemonShortInfo, RequestState } from "../../../models";
-import {
-  FETCH_POKEMONS,
-  FETCH_POKEMONS_FAILED,
-  FETCH_POKEMONS_SUCCESS,
-  PokemonActions,
-  SAVE_POKEMON_NAME,
-} from "./pokemon.types";
+import { createSlice } from "@reduxjs/toolkit";
+import { ErrorState, PokemonShortInfo, RequestState } from "../../../models";
+import { fetchPokemons } from "./pokemon.thunks";
 
 interface PokemonState {
   list: PokemonShortInfo[];
   pokemonName: string;
   request: RequestState;
+  error: ErrorState;
 }
 
 const initialState: PokemonState = {
   list: [],
   pokemonName: "",
   request: RequestState.LOADING,
+  error: {
+    message: "",
+    title: "",
+  },
 };
 
-export default function reducers(
-  state = initialState,
-  action: PokemonActions
-): PokemonState {
-  switch (action.type) {
-    case FETCH_POKEMONS:
-      return {
-        ...state,
-        request: RequestState.LOADING,
-      };
-    case FETCH_POKEMONS_SUCCESS:
-      return {
-        ...state,
-        list: action.payload,
-        request: RequestState.SUCCESS,
-      };
-    case FETCH_POKEMONS_FAILED:
-      return {
-        ...state,
-        list: [],
-        request: RequestState.ERROR,
-      };
-    case SAVE_POKEMON_NAME:
-      return {
-        ...state,
-        pokemonName: action.payload,
-      };
-    default:
-      return state;
-  }
-}
+const pokemonSlice = createSlice({
+  name: "pokemonReducer",
+  initialState,
+  reducers: {
+    savePokemonName: (state, action) => {
+      state.pokemonName = action.payload;
+    },
+  },
+  extraReducers: (builder) => {
+    builder.addCase(fetchPokemons.fulfilled, (state, action) => {
+      state.list = action.payload;
+      state.request = RequestState.SUCCESS;
+    });
+
+    builder.addCase(fetchPokemons.rejected, (state, action) => {
+      state.request = RequestState.ERROR;
+      state.error = action.payload as ErrorState;
+    });
+
+    builder.addCase(fetchPokemons.pending, (state) => {
+      state.request = RequestState.LOADING;
+    });
+  },
+});
+
+export const { savePokemonName } = pokemonSlice.actions;
+
+export default pokemonSlice.reducer;

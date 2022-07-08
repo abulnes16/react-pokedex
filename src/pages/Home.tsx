@@ -7,7 +7,6 @@ import PokemonList from "../components/PokemonList";
 import Spinner from "../components/Spinner";
 import { RequestState } from "../models";
 import { useAppDispatch, useAppSelector } from "../store";
-import { savePokemonName } from "../store/slices/pokemon/pokemon.actions";
 import { fetchPokemons } from "../store/slices/pokemon/pokemon.thunks";
 
 const Home = () => {
@@ -18,7 +17,6 @@ const Home = () => {
   const dispatch = useAppDispatch();
 
   useEffect(() => {
-    //@ts-ignore
     dispatch(fetchPokemons(150));
   }, []);
 

@@ -1,15 +1,25 @@
+import {
+  GetPokemonsResponse,
+  GetPokemonsResult,
+  PokemonShortInfo,
+} from "../models";
 import axios from "../modules/axios";
 
-export async function getPokemons(limit: number) {
+export async function getPokemons(limit: number): Promise<GetPokemonsResult> {
   try {
-    const response = await axios.get(`pokemon?limit=${limit}`);
+    const response = await axios.get<GetPokemonsResponse>(
+      `pokemon?limit=${limit}`
+    );
     if (response.status === 200) {
-      return response.data.results;
+      return { kind: "ok", results: response.data.results };
     } else {
       throw new Error(response.toString());
     }
   } catch (error) {
-    return error;
+    return {
+      kind: "error",
+      error: error as Error,
+    };
   }
 }
 

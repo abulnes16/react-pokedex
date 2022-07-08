@@ -1,26 +1,22 @@
-import React, { useState } from "react";
+import React from "react";
+import { useAppDispatch } from "../store";
+import { savePokemonName } from "../store/slices/pokemon/pokemon.actions";
 
-interface FormProps {
-  filterList: (name: string) => void;
-}
+const Form: React.FC<any> = () => {
+  const dispatch = useAppDispatch();
 
-const Form: React.FC<FormProps> = (props) => {
-  const [pokemonName, setPokemonName] = useState("");
-
-  const searchPokemon = (event: React.FormEvent) => {
-    event.preventDefault();
-    props.filterList(pokemonName);
+  const setPokemonName = (name: string) => {
+    dispatch(savePokemonName(name));
   };
 
   return (
     <section className="form-container">
-      <form className="form" onSubmit={searchPokemon}>
+      <form className="form">
         <input
           type="text"
           placeholder="Nombre del pokemon"
           onChange={(event) => setPokemonName(event.target.value)}
         />
-        <input className="button" type="submit" value="Buscar" />
       </form>
     </section>
   );
